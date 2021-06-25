@@ -12,7 +12,7 @@ ptr += 1
 
 for n in range(5, 1001, 2):             # 홀수만을 대상으로 설정
     i = 1
-    while prime[i] * prime[i] <= n:     # 
+    while prime[i] * prime[i] <= n:     # 소수 제곱값이 n보다 작은지 판단
         counter += 2
         if n % prime[i] == 0:           # 나누어 떨어지므로 소수가 아님
             break                       # 반복 중단
