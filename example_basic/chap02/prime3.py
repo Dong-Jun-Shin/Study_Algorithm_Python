@@ -4,7 +4,7 @@ count = 0                               # 곱셈과 나눗셈을 합한 횟수
 ptr = 0                                 # 이미 찾은 소수의 개수
 prime = [None] * 500                    # 소수를 저장하는 배열
 
-prime[pter] = 2
+prime[ptr] = 2
 ptr += 1
 
 prime[ptr] = 3
