@@ -1,11 +1,13 @@
 # 체인법으로 해시 함수 구현하기
 
+from __future__ import annotations
 from typing import Any, Type
 import hashlib
 
 
 class Node:
     """해시를 구성하는 노드"""
+
     def __init__(self, key: Any, value: Any, next: Node) -> None:
         """초기화"""
         self.key = key      # 키
@@ -26,12 +28,12 @@ class ChainedHash:
         if isinstance(key, int):
             return key % self.capacity
 
-        print(key)
-        print(str(key))
-        print(str(key).encode())
-        print(hashlib.sha256(str(key).encode()))
-        print(hashlib.sha256(str(key).encode()).hexdigest())
-        print(int(hashlib.sha256(str(key).encode()).hexdigest(), 16))
+        print(key)                                                      # abc
+        print(str(key))                                                 # abc
+        print(str(key).encode())                                        # b'abc' 바이트 문자열 abc
+        print(hashlib.sha256(str(key).encode()))                        # <sha256 HASH object @ 0x0000014FFDCB6970>
+        print(hashlib.sha256(str(key).encode()).hexdigest())            # ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad 16진수 해시
+        print(int(hashlib.sha256(str(key).encode()).hexdigest(), 16))   # 84342368487090800366523834928142263660104883695016514377462985829716817089965 10진수 정수
 
         return(int(hashlib.sha256(str(key).encode()).hexdigest(), 16) % self.capacity)
 
