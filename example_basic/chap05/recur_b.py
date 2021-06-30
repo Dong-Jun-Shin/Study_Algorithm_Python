@@ -3,7 +3,7 @@
 import os
 import sys
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
-4#print(__file__)                                                         # 현재 파일의 위치 반환
+#print(__file__)                                                         # 현재 파일의 위치 반환
 #print(os.path.dirname(__file__))                                        # 파일이 위치한 경로명 반환
 #print(os.path.abspath(os.path.dirname(__file__)))                       # 특정 경로에 대한 절대 경로 반환
 #print(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))      # 해당 절대 경로가 위치한 경로 반환
