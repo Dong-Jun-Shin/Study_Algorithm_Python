@@ -12,20 +12,29 @@ def heap_sort(a: MutableSequence) -> None:
         temp = a[left]              # 루트
 
         parent = left
-        while parent < (right + 1) // 2:
+        # a[left]의 값을 자식 노드까지 계속해서 스캔하고 적정 자리에 배치
+        while parent < (right + 1) // 2: # 조건에 맞지 않으면, 최하위 자식 노드
             cl = parent * 2 + 1     # 왼쪽 자식
             cr = cl + 1             # 오른쪽 자식
-            child = cr if cr <= right and a[cr] > a[cl] else cl     # 큰 값을 선택
-            if temp >= a[child]:
+            
+            # 큰 값을 선택
+            # 오른쪽 자식이 끝 노드 범위 안에 있고, 오른쪽 자식이 왼쪽보다 크면 오른쪽 자식 선택
+            child = cr if cr <= right and a[cr] > a[cl] else cl
+            
+            if temp >= a[child]:    # 범위의 최상위 노드 값이 선택된 자식보다 작으면 멈춤
                 break
             a[parent] = a[child]    # 최상위 노드 값에 자식 노드 값 삽입
             parent = child          # 자식 노드의 인덱스를 부모 노드 인덱스에 설정
-        a[parent] = temp            # 최상위 노드의 값이 들어갈 인덱스가 설정되었을 때, 해당 노드 위치에 최상위 노드의 값을 삽입
+        # 최상위 노드의 있던 값을 자식 노드가 있던 위치에 삽입
+        a[parent] = temp            
         
 
     n = len(a)
 
-    for i in range((n - 1) // 2, -1, -1):       # a[i] ~ a[n - 1]을 힙으로 만들기
+    # a[i] ~ a[n - 1]을 힙으로 만들기
+    # 배열의 중간부터 끝까지 힙으로 만들기
+    # 배열의 중간부터 단계마다 하나씩 범위를 늘림
+    for i in range((n - 1) // 2, -1, -1):       
         down_heap(a, i, n - 1)
     
     for i in range(n - 1, 0, -1):
