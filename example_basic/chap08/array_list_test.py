@@ -14,7 +14,7 @@ def select_Menu() -> Menu:
         if 1 <= n <= len(Menu):
             return Menu(n)
 
-lst = ArrayLinkedList()                         # 연결 리스트를 생성
+lst = ArrayLinkedList(100)                         # 연결 리스트를 생성
 
 while True:
     menu = select_Menu()                        # 메뉴를 선택

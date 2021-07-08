@@ -8,7 +8,7 @@ Null = -1
 class Node:
     """연결 리스트용 노드 클래스(배열 커서 버전)"""
 
-    def __init(self, data = Null, next = Null, dnext = Null):
+    def __init__(self, data = Null, next = Null, dnext = Null):
         """초기화"""
         self.data = data        # 데이터
         self.next = next        # 리스트의 뒤쪽 포인터
@@ -114,7 +114,7 @@ class ArrayLinkedList:
     def remove_last(self) -> None:
         """꼬리 노드를 삭제"""
         if self.head != Null:
-            if self.n[self.head].next == null:      # 노드가 1개 뿐이면
+            if self.n[self.head].next == Null:      # 노드가 1개 뿐이면
                 self.remove_first()                 # 머리 노드 삭제
             else:
                 ptr = self.head                     # 스캔 중인 노드
@@ -123,10 +123,10 @@ class ArrayLinkedList:
                 while self.n[ptr].next != Null:
                     pre = ptr
                     ptr = self.n[ptr].next
-                    self.n[pre].next = Null         # pre는 삭제한 뒤의 꼬리 노드
-                    self.delete_index(ptr)
-                    self.current = pre
-                    self.no -= 1
+                self.n[pre].next = Null         # pre는 삭제한 뒤의 꼬리 노드
+                self.delete_index(ptr)
+                self.current = pre
+                self.no -= 1
 
                 
     def remove(self, p: int) -> None:
