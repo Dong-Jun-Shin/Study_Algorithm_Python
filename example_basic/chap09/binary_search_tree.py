@@ -106,7 +106,7 @@ class BinarySearchTree:
                 parent.right = left.left    # parent의 오른쪽 자식 노드가 left였으니, left의 왼쪽 자식을 삽입
         return True
 
-    def dump(self) -> None:
+    def dump(self, reverse=False) -> None:
         """덤프(모든 노드를 키의 오름차순으로 출력)"""
 
         def print_subtree(node: Node):
@@ -116,4 +116,29 @@ class BinarySearchTree:
                 print(f'{node.key}  {node.value}')      # node를 출력
                 print_subtree(node.right)               # 오른쪽 서브트리를 오름차순으로 출력
 
-        print_subtree(self.root)
+        def print_subtree_rev(node: Node):
+            """node를 루트로 하는 서브트리의 노드를 키의 내림차순으로 출력"""
+            if node is not None:
+                print_subtree_rev(node.right)               # 오른쪽 서브트리를 오름차순으로 출력
+                print(f'{node.key}  {node.value}')      # node를 출력
+                print_subtree_rev(node.left)                # 왼쪽 서브트리를 오름차순으로 출력
+
+        print_subtree_rev(self.root) if reverse else print_subtree(self.root)
+
+    def min_key(self) -> Any:
+        """가장 작은 키"""
+        if self.root is None:
+            return None
+        p = self.root
+        while p.left is not None:
+            p = p.left
+        return p.key
+
+    def max_key(self) -> Any:
+        """가장 큰 키"""
+        if self.root is None:
+            return None
+        p = self.root
+        while p.right is not None:
+            p = p.right
+        return p.key
