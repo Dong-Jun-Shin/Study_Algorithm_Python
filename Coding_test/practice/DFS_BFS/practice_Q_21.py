@@ -11,21 +11,21 @@ for _ in range(n):
 
 def bfs(i, j):
     q = deque()
-    q.append(((i, j), 0))
+    q.append((i, j))
     united = [(i, j)]
     summary = graph[i][j]
     count = 1
     visited[i][j] = 1
     directions = [(-1, 0), (0, 1), (1, 0), (0, -1)]
     while q:
-        codi, cost = q.popleft()
+        codi = q.popleft()
         for direction in directions:
             next_x = codi[0] + direction[0]
             next_y = codi[1] + direction[1]
             if 0 <= next_x < n and 0 <= next_y < n:
                 if visited[next_x][next_y] == 0 and l <= abs(graph[codi[0]][codi[1]] - graph[next_x][next_y]) <= r:
                     next_codi = (next_x, next_y)
-                    q.append((next_codi, cost + 1))
+                    q.append(next_codi)
                     united.append(next_codi)
                     summary += graph[next_x][next_y]
                     count += 1
