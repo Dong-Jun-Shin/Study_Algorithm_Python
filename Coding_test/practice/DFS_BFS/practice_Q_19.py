@@ -1,4 +1,5 @@
 # 연산자 끼워 넣기 (DFS 방식이 순열 + 브루트포스 방식보다 10배정도 빠르고, 메모리도 6배 정도 적게 사용)
+# (DFS, BFS, 중복순열 + 브루트포스로 풀이 가능)
 import sys
 
 input = sys.stdin.readline
