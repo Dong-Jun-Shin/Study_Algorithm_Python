@@ -8,8 +8,7 @@ from collections import deque
 def get_next_codi(codi, new_board):
     next_codi = []
     codi = list(codi)
-    x1, y1 = codi[0]
-    x2, y2 = codi[1]
+    x1, y1, x2, y2 = codi[0][0], codi[0][1], codi[1][0], codi[1][1]
     directions = [(-1, 0), (0, 1), (1, 0), (0, -1)]
     for direction in directions:
         next_x1 = x1 + direction[0]
@@ -33,29 +32,28 @@ def get_next_codi(codi, new_board):
     return next_codi
 
 def solution(board):
+    answer = 0
     n = len(board)
-    # 1. 보드 외부에 벽 세우기
     new_board = [[1] * (n + 2) for _ in range(n + 2)]
     for i in range(n):
         for j in range(n):
             new_board[i + 1][j + 1] = board[i][j]
-    
-    # 2. bfs 수행
+
     q = deque()
-    visited = []
-    robot_codi = {(1, 1), (1, 2)}
-    q.append((robot_codi, 0))
-    visited.append(robot_codi)
+    
+    codi = {(1, 1), (1, 2)}
+    visited = [codi]
+    q.append((codi, 0))
     while q:
         codi, cost = q.popleft()
         if (n, n) in codi:
             return cost
-            
         for next_codi in get_next_codi(codi, new_board):
             if next_codi not in visited:
                 q.append((next_codi, cost + 1))
                 visited.append(next_codi)
-    return 0
+
+    return answer
 
 
 board = [[0, 0, 0, 1, 1],[0, 0, 0, 1, 0],[0, 1, 0, 1, 1],[1, 1, 0, 0, 1],[0, 0, 0, 0, 0]]
