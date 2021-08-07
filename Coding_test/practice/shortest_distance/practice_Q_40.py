@@ -36,3 +36,15 @@ num = bisect.bisect_left(dp, dist)
 count = bisect.bisect_right(dp, dist) - bisect.bisect_left(dp, dist)
 
 print(num, dist, count)
+
+
+""" Test case
+6 7
+3 6
+4 3
+3 2
+1 3
+1 2
+2 4
+5 2
+"""
