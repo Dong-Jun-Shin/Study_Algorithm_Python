@@ -11,7 +11,7 @@ def bm_match(txt: str, pat: str) -> int:
         # pt번째 패턴 문자의 유니코드를 코드 포인트로 바꾸고, 해당 코드 포인트를 위치로 하는 건너뛰기 표에 건너뛸 거리를 삽입
         # (현재 문자에서 패턴 끝까지의 거리 > 패턴 길이 - pt 번째 - 1)
         skip[ord(pat[pt])] = len(pat) - pt - 1
-    # 건너뛰기 표가 다 만들어진 후, pt는 (패턴 길이 - 1)인 3이 되어있음
+    # 건너뛰기 표가 다 만들어진 후, pt는 (패턴 길이 - 1)인 2가 되어있음
 
     # 검색하기
     while pt < len(txt):                # 텍스트의 커서가 모두 스캔할 때까지
@@ -23,7 +23,7 @@ def bm_match(txt: str, pat: str) -> int:
             pp -= 1                     # 일치하기 때문에, 현재 패턴 커서에서 하나 이전 문자에 커서를 주목
         # 일치하는 문자가 없기 때문에, 
         # 현재 건너뛸 거리가 1보다 작으면, 1이 추가되도록 설정
-        # len(pat) - pp = len(pat) - (len(pat) - 1) = 1
+        # pt + len(pat) - pp = pt + len(pat) - (len(pat) - 1) = 이번 비교를 시작한 문자의 위치 + 1
         pt += skip[ord(txt[pt])] if skip[ord(txt[pt])] > len(pat) - pp else len(pat) - pp  
 
     return -1
