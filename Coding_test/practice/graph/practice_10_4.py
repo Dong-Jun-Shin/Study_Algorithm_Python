@@ -35,3 +35,12 @@ def topology_sort():
 
 
 topology_sort()
+
+"""Test case
+5
+10 -1
+10 1 -1
+4 1 -1
+4 3 1 -1
+3 3 -1
+"""
