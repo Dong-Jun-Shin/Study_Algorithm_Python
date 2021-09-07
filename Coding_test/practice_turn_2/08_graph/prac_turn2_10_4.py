@@ -18,6 +18,7 @@ def topology_sort():
                 q.append(node)
     return min_cost
 
+
 n = int(input())
 indegrees = [0] * (n + 1)
 graph = [[] for _ in range(n + 1)]
