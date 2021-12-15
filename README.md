@@ -13,7 +13,7 @@
     * DFS(깊이 우선 탐색)   : [dfs.py](/Base_algorithm/dfs.py)
     * BFS(너비 우선 탐색)   : [bfs.py](/Base_algorithm/bfs.py)
     * 이진탐색              : [binary_search.py](/Base_algorithm/binary_search.py)
-    * 다이나믹 프로그래밍   : [dp.py](/Base_algorithm/dp.py)
+    * 다이나믹 프로그래밍    : [dp.py](/Base_algorithm/dp.py)
     * 플로이드 워셜         : [floyd_warshall.py](/Base_algorithm/floyd_warshall.py)
     * 크루스칼              : [kruskal.py](/Base_algorithm/kruskal.py)
     * 서로소 집합           : [union_find.py](/Base_algorithm/union_find.py)
