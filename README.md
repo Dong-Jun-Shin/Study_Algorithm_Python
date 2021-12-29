@@ -15,7 +15,7 @@
     * 이진탐색              : [binary_search.py](/Base_algorithm/binary_search.py)
     * 다이나믹 프로그래밍    : [dp.py](/Base_algorithm/dp.py)
     * 플로이드 워셜         : [floyd_warshall.py](/Base_algorithm/floyd_warshall.py)
-    * 크루스칼              : [kruskal.py](/Base_algorithm/kruskal.py)
+    * 크루스칼(최소 신장 트리) : [kruskal.py](/Base_algorithm/kruskal.py)
     * 서로소 집합           : [union_find.py](/Base_algorithm/union_find.py)
 
 * 함수
@@ -28,4 +28,5 @@
 * 최소 편집 거리(Minimum Edit Distance)
 * 벨만-포드 (Bellman-Ford)
 * 위상정렬
+* 최소 신장 트리
 * 슬라이딩 윈도우
