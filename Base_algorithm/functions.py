@@ -4,6 +4,11 @@ n = input()     # return (String)
 # 자료형 변환
 list(), set(), str(), int(), float(), dict()
 
+# 문자열
+# 자르기(default: 공백)
+ex_str.split()
+ex_str[a:b]     # a이상 b이하의 문자열 반환
+
 # 큐
 # 우선순위큐
 import heapq
@@ -89,6 +94,8 @@ n_case = product(a_list, b_list, c_list)    # return ([(a_list[0], b_list[0], c_
 # list 연산
 n_list = a_list + b_list    # [(a_list)(b_list)]
 n_list = n_list * 3         # [(n_list)(n_list)...]
+n_list[1:9]                 # 리스트 슬라이싱을 이용한 일부 리스트 추출 (1이상 9미만의 인덱스를 가진  추출)
+
 
 n_list.append(val)          # val을 리스트 끝에 추가
 n_list.insert(idx, val)     # idx번째 위치에 val를 추가
