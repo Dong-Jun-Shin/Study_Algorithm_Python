@@ -28,5 +28,4 @@
 * 최소 편집 거리(Minimum Edit Distance)
 * 벨만-포드 (Bellman-Ford)
 * 위상정렬
-* 최소 신장 트리
 * 슬라이딩 윈도우
