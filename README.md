@@ -10,13 +10,13 @@
 
 ### 자주 사용하는 알고리즘 및 함수
 * 알고리즘
-    * DFS(깊이 우선 탐색)   : [dfs.py](/Base_algorithm/dfs.py)
-    * BFS(너비 우선 탐색)   : [bfs.py](/Base_algorithm/bfs.py)
-    * 이진탐색              : [binary_search.py](/Base_algorithm/binary_search.py)
-    * 다이나믹 프로그래밍    : [dp.py](/Base_algorithm/dp.py)
-    * 플로이드 워셜         : [floyd_warshall.py](/Base_algorithm/floyd_warshall.py)
-    * 크루스칼(최소 신장 트리) : [kruskal.py](/Base_algorithm/kruskal.py)
-    * 서로소 집합           : [union_find.py](/Base_algorithm/union_find.py)
+    * DFS(깊이 우선 탐색)          : [dfs.py](/Base_algorithm/dfs.py)
+    * BFS(너비 우선 탐색)          : [bfs.py](/Base_algorithm/bfs.py)
+    * 이진탐색                     : [binary_search.py](/Base_algorithm/binary_search.py)
+    * 다이나믹 프로그래밍           : [dp.py](/Base_algorithm/dp.py)
+    * 플로이드 워셜(모든 최단 경로) : [floyd_warshall.py](/Base_algorithm/floyd_warshall.py)
+    * 크루스칼(최소 신장 트리)      : [kruskal.py](/Base_algorithm/kruskal.py)
+    * 서로소 집합                  : [union_find.py](/Base_algorithm/union_find.py)
 
 * 함수
     * 자주 사용하는 함수    : [functions.py](/Base_algorithm/functions.py)
@@ -30,4 +30,4 @@
 * 위상정렬
 * 슬라이딩 윈도우
 * 좌표 사용한 DFS
-* 다익스트라
+* 다익스트라(특정 지점에서의 모든 최단 경로)
